@@ -4,7 +4,6 @@ import { NOT_FOUND } from "@/constants/http-status-codes";
 import { NOT_FOUND as NOT_FOUND_MESSAGE } from "@/constants/http-status-phrases";
 
 const notFound: NotFoundHandler = (c) => {
-  c.var.logger.info("Here?");
   return c.json({
     message: `${NOT_FOUND_MESSAGE} - ${c.req.path}`,
   }, NOT_FOUND);
