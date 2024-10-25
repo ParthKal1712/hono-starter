@@ -12,7 +12,7 @@ const router = createRouter().openapi(
     method: "get",
     path: "/",
     responses: {
-      [HttpStatusCodes.OK]: jsonContent(z.object({ message: z.string() }), "Test Route"),
+      [HttpStatusCodes.OK]: jsonContent(z.object({ message: z.string() }), "Index Route"),
     },
   }),
   // Then implement the route

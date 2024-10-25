@@ -1,12 +1,13 @@
 import configureOpenAPI from "@/lib/configure-open-api";
 import createApp from "@/lib/create-app";
 import index from "@/routes/index.route";
+import users from "@/routes/users/users.index";
 
 // Create the Hono App using our custom settings
 const app = createApp();
 
-// Defining Routes
-const routes = [index];
+// Defining Routes (Include all New Routes Here!)
+const routes = [index, users];
 
 // Traversing through the list of routes and implementing them
 routes.forEach((route) => {
